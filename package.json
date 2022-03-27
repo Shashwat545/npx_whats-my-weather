@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/Shashwat545/npx-open_weather/issues"
   },
-  "homepage": "https://github.com/Shashwat545/npx-open_weather#readme"
+  "homepage": "https://github.com/Shashwat545/npx-open_weather#readme",
+  "dependencies": {
+    "weather-js": "^2.0.0",
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "cli-spinners": "^2.5.0",
+    "inquirer": "^7.3.2",
+    "open": "^7.0.4",
+    "ora": "^5.1.0",
+    "request": "^2.88.2"
+  }
 }
