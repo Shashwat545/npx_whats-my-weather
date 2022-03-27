@@ -12,7 +12,7 @@ const weather=require('weather-js');
 clear();
 
 const prompt = inquirer.createPromptModule();
-const questions = [
+const actions = [
     {
         type: "list",
         name: "action",
@@ -24,14 +24,18 @@ const questions = [
                     inquirer.prompt([
                     {
                         name: 'location',
-                        message: `Which city are you in right now? (If you don't type any then it will select New York by default)`,
+                        message: `Which city are you in right now? ${chalk.grey.dim("(If you don't type any then it will select New York by default)")}`,
                         default: `New York`
                     },
                     ])
                     .then(answers => {
                         weather.find({search: answers.location, degreeType: 'C'}, function(err, result) {
                             if(err) console.log(err);
-                            console.log(result[0].location.name);
+                            console.log('\nLocation: '+result[0].location.name+'\n');
+                            console.log('Temperature: '+result[0].current.temperature+'°C\n');
+                            console.log('Sky: '+result[0].current.skytext+'\n');
+                            console.log('Humidity: '+result[0].current.humidity+'%\n');
+                            console.log('Wind: '+result[0].current.winddisplay+'\n');
                         });
                     });
                 }
@@ -44,7 +48,7 @@ const questions = [
                 }
             },
             {
-                name: "Just quit.",
+                name: "Just exit.",
                 value: () => {
                     console.log("See you again soon!\n");
                 }
@@ -64,15 +68,12 @@ const data = {
     labelLinkedIn: chalk.white.bold("   LinkedIn:"),
 };
 
-const me = boxen(
+const box = boxen(
     [
-        `${data.name}`,
-        ``,
-        `${data.labeldeveloper}  ${data.developer}`,
-        ``,
+        `${data.name}\n`,
+        `${data.labeldeveloper}  ${data.developer}\n`,
         `${data.labelGitHub}  ${data.github}`,
-        `${data.labelLinkedIn}  ${data.linkedin}`,
-        ``,
+        `${data.labelLinkedIn}  ${data.linkedin}\n`,
         `${chalk.italic(
             "This is an open source weather app,"
         )}`,
@@ -88,12 +89,12 @@ const me = boxen(
         margin: 1,
         float: 'center',
         padding: 1,
-        borderStyle: "single",
-        borderColor: "green"
+        borderStyle: "round",
+        borderColor: "green",
     }
 );
 
-console.log(me);
+console.log(box);
 const tip = [
     `Tip: Try ${chalk.cyanBright.bold(
         "cmd/ctrl + click"
@@ -101,5 +102,4 @@ const tip = [
     '',
 ].join("\n");
 console.log(tip);
-
-prompt(questions).then(answer => answer.action());
+prompt(actions).then(answer => answer.action());

@@ -1,5 +1,5 @@
 {
-  "name": "open_weather",
+  "name": "whats-my-weather",
   "version": "1.0.0",
   "description": "View the weather in your terminal without any installation",
   "main": "index.js",
