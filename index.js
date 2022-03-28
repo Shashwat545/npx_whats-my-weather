@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+'use strict'
 const boxen = require("boxen");
 const chalk = require("chalk");
 const inquirer = require("inquirer");
@@ -62,7 +64,6 @@ const data = {
     developer: `${chalk.hex("#2b82b2").bold("Shashwat Singh")}`,
     github: chalk.gray("https://github.com/") + chalk.green("Shashwat545/npx-open_weather"),
     linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("shashwatsingh545"),
-
     labeldeveloper: chalk.white.bold("  Developer:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
     labelLinkedIn: chalk.white.bold("   LinkedIn:"),
@@ -79,7 +80,7 @@ const box = boxen(
         )}`,
         `${chalk.italic("it works right inside your terminal without")}`,
         `${chalk.italic(
-            "any installation. If you found this interesting "
+            "any hassle. If you found this interesting "
         )}`,
         `${chalk.italic(
             "then make sure to leave a star on the Github repo."

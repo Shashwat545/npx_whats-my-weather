@@ -1,21 +1,24 @@
 {
   "name": "whats-my-weather",
-  "version": "1.0.0",
-  "description": "View the weather in your terminal without any installation",
+  "version": "1.0.10",
+  "description": "View the weather in your terminal without any hassle",
   "main": "index.js",
+  "bin": {
+    "whats-my-weather": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shashwat545/npx-open_weather.git"
+    "url": "git+https://github.com/Shashwat545/npx_whats-my-weather.git"
   },
   "author": "Shashwat Singh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shashwat545/npx-open_weather/issues"
+    "url": "https://github.com/Shashwat545/npx_whats-my-weather/issues"
   },
-  "homepage": "https://github.com/Shashwat545/npx-open_weather#readme",
+  "homepage": "https://github.com/Shashwat545/npx_whats-my-weather#readme",
   "dependencies": {
     "weather-js": "^2.0.0",
     "boxen": "^4.2.0",
