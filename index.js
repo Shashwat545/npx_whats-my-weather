@@ -45,7 +45,7 @@ const actions = [
             {
                 name: `View the ${chalk.redBright.bold("GitHub repo")}?`,
                 value: () => {
-                    open('https://github.com/Shashwat545/npx-open_weather');
+                    open('https://github.com/Shashwat545/npx_whats-my-weather');
                     console.log("\n A ⭐ on the repo would make my day :) \n");
                 }
             },
@@ -62,7 +62,7 @@ const actions = [
 const data = {
     name: chalk.bold.green("                   Weather"),
     developer: `${chalk.hex("#2b82b2").bold("Shashwat Singh")}`,
-    github: chalk.gray("https://github.com/") + chalk.green("Shashwat545/npx-open_weather"),
+    github: chalk.gray("https://github.com/") + chalk.green("Shashwat545/npx_whats-my-weather"),
     linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("shashwatsingh545"),
     labeldeveloper: chalk.white.bold("  Developer:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
