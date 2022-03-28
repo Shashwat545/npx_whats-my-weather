@@ -12,7 +12,7 @@ npx whats-my-weather
 
 The final output might look something like this: 
 
-
+<img src="https://user-images.githubusercontent.com/78429106/160380356-970335d5-3228-49c8-888f-4593b6484d4b.gif">
 
 ## :page_facing_up: License
 
